@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+        <h3>Day 1 task</h3>
+        <form onsubmit="validateForm(event)">
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Title: </label>
+              <div class="col-md-8">
+                <select class="custom-select" required>
+                    <option value="mr" selected>Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="miss">Miss</option>
+                  </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">First Name: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="firstName" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Last Name: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Address: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="address" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">City: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="city" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">State: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="state" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Postal Code: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="postalCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Country: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="country" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Phone: </label>
+              <div class="col-md-8">
+                <input type="number" class="form-control" id="phone" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Fax: </label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="fax" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Email:</label>
+              <div class="col-md-8">
+                <input type="email" class="form-control" id="email" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label">Payment By:</label>
+              <div class="col-md-8">
+                  <div class="form-check">
+                    <input class="form-check-input" name="radio" type="radio" value="Paypal">
+                    <label class="form-check-label">
+                     PayPal
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" name="radio" type="radio"  value="manual">
+                    <label class="form-check-label">
+                     Manual: Pay on Arrival
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" name="radio" type="radio" value="cc">
+                    <label class="form-check-label">
+                     Credit Card
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label">Any additional Requests:</label>
+                <textarea class="form-control col-md-8" id="requirement" rows="3" required></textarea>
+           </div>
+           <div class="justify-content-end row">
+                <div class="col-md-8">
+                    <input class="form-check-input" type="checkbox" id="checkbox-agree" required />
+                    <label  class="form-check-label" for="defaultCheck1">
+                    I agree with terms and conditions
+                    </label>
+               </div>
+               
+          </div>
+          <br>
+           <div class="justify-content-end row">
+                <div class="col-md-8">
+                     <button type="submit" class="btn btn-primary">Confirm and checkout</button>
+               </div>
+               
+          </div>
+
+        
+           
+          </form>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Custom External JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
