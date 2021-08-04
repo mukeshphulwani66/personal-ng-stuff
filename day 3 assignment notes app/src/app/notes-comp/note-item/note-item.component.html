@@ -1,0 +1,7 @@
+<div class="card" style="padding: 20px;">
+    <h2>{{item.title}}</h2>
+ <button class="btn pink" (click)="showNote()">Click to view more</button>
+</div>
+
+<app-note-detail *ngIf="show" [title]="item.title" [body]="item.body"></app-note-detail>
+
