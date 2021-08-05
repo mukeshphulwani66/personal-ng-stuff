@@ -1,0 +1,203 @@
+<div class="container">
+
+    <h3>Angular Reactive form task</h3>
+    <form [formGroup]="myform">
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Title: </label>
+          <div class="col-md-8">
+            <select class="custom-select" [formControl]="myselect">
+                <!-- <option value="mr" selected>Mr</option>
+                <option value="mrs">Mrs</option>
+                <option value="miss">Miss</option> -->
+                <option *ngFor="let o of selectOptions" [ngValue]="o">{{o}}</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">First Name: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="firstname">
+              <div class="alert alert-danger" [hidden]="firstname.valid || firstname.untouched">
+                <p>Some Problem with firstname field.</p>
+                <div [hidden]="!firstname.hasError('required')">
+                  <p>- firstname is required field</p>
+                </div>    
+          </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Last Name: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="lastname">
+                <div class="alert alert-danger" [hidden]="lastname.valid || lastname.untouched">
+                    <p>Some Problem with lastname field.</p>
+                    <div [hidden]="!lastname.hasError('required')">
+                    <p>- lastname is required field</p>
+                    </div>
+                </div>
+
+          </div>
+         
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Address: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="address">
+                <div class="alert alert-danger" [hidden]="address.valid || address.untouched">
+                <p>Some Problem with address field.</p>
+                <div [hidden]="!address.hasError('required')">
+                <p>- address is required field</p>
+                </div>
+          </div>
+          </div>
+          
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">City: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="city">
+              <div class="alert alert-danger" [hidden]="city.valid || city.untouched">
+                <p>Some Problem with city field.</p>
+                <div [hidden]="!city.hasError('required')">
+                <p>- city is required field</p>
+                </div>
+            </div>
+          </div>
+        
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">State: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" id="state" [formControl]="state">
+              <div class="alert alert-danger" [hidden]="state.valid || state.untouched">
+                    <p>Some Problem with state field.</p>
+                    <div [hidden]="!state.hasError('required')">
+                    <p>- state is required field</p>
+                    </div>
+                </div>
+          </div>
+        
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Postal Code: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="postalcode">
+                <div class="alert alert-danger" [hidden]="postalcode.valid || postalcode.untouched">
+                    <p>Some Problem with postalcode field.</p>
+                    <div [hidden]="!postalcode.hasError('required')">
+                    <p>- postalcode is required field</p>
+                    </div>
+                </div> 
+          </div>
+
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Country: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="country">
+                     <div class="alert alert-danger" [hidden]="country.valid || country.untouched">
+                        <p>Some Problem with country field.</p>
+                        <div [hidden]="!country.hasError('required')">
+                        <p>- country is required field</p>
+                        </div>
+                    </div>
+          </div>
+ 
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Phone: </label>
+          <div class="col-md-8">
+            <input type="number" class="form-control" [formControl]="phone">
+
+                <div class="alert alert-danger" [hidden]="phone.valid || phone.untouched">
+                    <p>Some Problem with phone field.</p>
+                    <div [hidden]="!phone.hasError('required')">
+                    <p>- phone is required field</p>
+                    </div>
+                </div>
+          </div>
+      
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Fax: </label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="fax">
+               <div class="alert alert-danger" [hidden]="fax.valid || fax.untouched">
+                    <p>Some Problem with fax field.</p>
+                    <div [hidden]="!fax.hasError('required')">
+                    <p>- fax is required field</p>
+                    </div>
+                </div>
+          </div>
+         
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Email:</label>
+          <div class="col-md-8">
+            <input type="email" class="form-control" [formControl]="email" >
+              <div class="alert alert-danger" [hidden]="email.valid || email.untouched">
+                 <p>Some Problem with email field.</p>
+                 <div [hidden]="!email.hasError('required')">
+                   <p>- email is required field</p>
+                 </div>
+                 <div [hidden]="!email.hasError('email')">
+                    <p>- Username must be valid email</p>
+                  </div>
+          </div>
+          
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label">Payment By:</label>
+          <div class="col-md-8">
+              <div class="form-check">
+                <input class="form-check-input" name="radio" type="radio" value="Paypal" [formControl]="payment" >
+                <label class="form-check-label">
+                 PayPal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" name="radio" type="radio"  value="manual" [formControl]="payment">
+                <label class="form-check-label">
+                 Manual: Pay on Arrival
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" name="radio" type="radio" value="cc" [formControl]="payment">
+                <label class="form-check-label">
+                 Credit Card
+                </label>
+              </div>
+          </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-4 col-form-label">Any additional Requests:</label>
+            <textarea class="form-control col-md-8" rows="3" [formControl]="requirement"></textarea>
+            <div class="alert alert-danger" [hidden]="requirement.valid || requirement.untouched">
+                <p>Some Problem with requirement field.</p>
+                <div [hidden]="!requirement.hasError('required')">
+                  <p>- requirement is required field</p>
+                </div>
+              </div>
+       </div>
+       <div class="justify-content-end row">
+            <div class="col-md-8">
+                <input class="form-check-input" type="checkbox" id="checkbox-agree" />
+                <label  class="form-check-label" for="defaultCheck1">
+                I agree with terms and conditions
+                </label>
+           </div>
+           
+      </div>
+      <br>
+       <div class="justify-content-end row">
+            <div class="col-md-8">
+                 <button type="submit" class="btn btn-primary" (click)="onRegister()">Confirm and checkout</button>
+           </div>
+           
+      </div>
+
+    
+       
+      </form>
+</div>
